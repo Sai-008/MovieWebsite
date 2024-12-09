@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieMania - Movie Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body class="bg-dark text-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+        <!-- Logo and Brand -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="images/logo.png" alt="MovieMania Logo" class="img-fluid rounded-circle" style="width: 40px; height: 40px;">
+            <span class="ms-2">MovieMania</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sources">Sources</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Header -->
+    <header class="py-5 text-center">
+        <div class="container">
+            <h1 class="display-4">Welcome to MovieMania</h1>
+            <p class="lead">Explore the latest movies, trailers, and reviews all in one place.</p>
+        </div>
+    </header>
+
+    <!-- Movie Search -->
+    <section class="container my-4">
+        <h2>Search for Movies</h2>
+        <div class="input-group mb-3">
+            <input type="text" id="movieSearch" class="form-control" placeholder="Search for a movie...">
+            <button class="btn btn-primary" id="searchBtn">Search</button>
+        </div>
+        <div id="searchResults" class="row"></div>
+    </section>
+
+    <!-- Featured Movies -->
+    <section class="container my-4">
+        <h2>Featured Movies</h2>
+        <div class="row">
+            <!-- Movie 1 -->
+            <div class="col-md-4">
+                <div class="card bg-dark text-light">
+                    <!-- Movie Poster Image -->
+                    <img src="https://i.imgur.com/hTZi7E7.jpg" class="card-img-top" alt="Movie Poster 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Avangers: Infinity War</h5>
+                        <!-- Link to Video -->
+                        <a href="https://youtu.be/-6u_kvadt14?si=cTPKOD8VC_ASezt_" class="btn btn-primary" target="_blank">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Movie 2 -->
+            <div class="col-md-4">
+                <div class="card bg-dark text-light">
+                    <!-- Movie Poster Image -->
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/199420fa-ceb1-4eb6-896e-20cd468913bb/ddaokm9-b41b35d2-6a3e-43e6-81cb-de99ce0187e8.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE5OTQyMGZhLWNlYjEtNGViNi04OTZlLTIwY2Q0Njg5MTNiYlwvZGRhb2ttOS1iNDFiMzVkMi02YTNlLTQzZTYtODFjYi1kZTk5Y2UwMTg3ZTguanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.A2czfcxRRRsLP_AktQskt0S0sHXCAoJg_fo1yAimzPE" class="card-img-top" alt="Movie Poster 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Captain America: Civil War</h5>
+                        <!-- Link to Video -->
+                        <a href="https://youtu.be/_6pflFY6lfA?t=1272" class="btn btn-primary" target="_blank">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Movie 3 -->
+            <div class="col-md-4">
+                <div class="card bg-dark text-light">
+                    <!-- Movie Poster Image -->
+                    <img src="https://i.redd.it/rm4sji6qiohz.jpg" class="card-img-top" alt="Movie Poster 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Thor: Ragnarok</h5>
+                        <!-- Link to Video -->
+                        <a href="https://youtu.be/fgWxyNGW8y8?t=849" class="btn btn-primary" target="_blank">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- sections -->
+     <section id="categories" class="container my-5">
+    <div class="container my-5">
+        <h2>Categories</h2>
+        <div class="row g-4">
+            <!-- Action Category -->
+            <div class="col-md-4">
+                <div class="card category-card" onclick="event.stopPropagation()">
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a4637adf-84a6-4eba-8020-71e9a0452e82/ddxfjoh-5c3a77e0-bad5-457e-b7fc-bcfd9793e863.jpg/v1/fill/w_1192,h_670,q_70,strp/top_10_action_movies_that_were_way_better_than_we__by_herocollector16_ddxfjoh-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvYTQ2MzdhZGYtODRhNi00ZWJhLTgwMjAtNzFlOWEwNDUyZTgyXC9kZHhmam9oLTVjM2E3N2UwLWJhZDUtNDU3ZS1iN2ZjLWJjZmQ5NzkzZTg2My5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.cWOC98U4fHWyMzGZHIn-uANhh5fsS4uwpbaVoP0-sXg" class="card-img-top" alt="Action">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Action</h5>
+                        <p class="card-text">High-adrenaline adventures, battles, and heroic feats.</p>
+                        <button class="btn btn-primary" onclick="showCategory('action')">Explore Action</button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Drama Category -->
+            <div class="col-md-4">
+                <div class="card category-card" onclick="event.stopPropagation()">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjW_dJ1M48KpYBp_pfzKPL_6yebIrF3p_-8c8iJE3gPitaN-oixROz89yEgQgJlSlLSgbKZuWBv-M2acRr_f85q7R9i-ECrq0HtNSm407pYqgZM0k0m5YGzIDViJNHmgjT-kpRPlfsXDu8/s1600/170427021445.jpg" height="210" class="card-img-top" alt="Drama">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Drama</h5>
+                        <p class="card-text">Emotionally intense movies focused on character development.</p>
+                        <button class="btn btn-primary" onclick="showCategory('drama')">Explore Drama</button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Comedy Category -->
+            <div class="col-md-4">
+                <div class="card category-card" onclick="event.stopPropagation()">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoAFkepUqR_-U7iKEoT2SjGTJ2supZVOJcig&s" class="card-img-top" alt="Comedy">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Comedy</h5>
+                        <p class="card-text">Laugh-out-loud movies full of humor and fun.</p>
+                        <button class="btn btn-primary" onclick="showCategory('comedy')">Explore Comedy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Categories Content (Action, Drama, Comedy) -->
+        <div id="categoriesContent">
+            <!-- Action Movies Section -->
+            <div id="action" class="category-content">
+                <h3>Action Movies</h3>
+                <div class="row g-4">
+                    <!-- Action Movie 1 -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQyv1ktB_GKi6o7KI1t2KciY6wVjaAxHWK6g&s" class="card-img-top" alt="Action Movie 1">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">John Wick 4</h5>
+                                <p class="card-text">A thrilling adventure with epic battles and explosive stunts.</p>
+                                <a href="https://youtu.be/QykFml86l-w?t=1477" class="btn btn-primary" target="_blank">Watch Video</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Action Movie 2 -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://m.media-amazon.com/images/M/MV5BOTFlY2VhNGUtYzY0Yy00OGE3LWExYzMtYzNhMDAwMzI4N2NmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" class="card-img-top" alt="Action Movie 2">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Ghost Sniper</h5>
+                                <p class="card-text">A high-stakes mission to save the world from impending doom.</p>
+                                <a href="https://youtu.be/wwKNxOG9R5s?t=1550" class="btn btn-primary" target="_blank">Watch Video</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Action Movie 3 -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f452aa2c-0c64-4bbf-b065-942b8dbda8bb/dfoe5l0-a5836bc5-cbd8-4d3c-9261-f0752203a7b1.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Y0NTJhYTJjLTBjNjQtNGJiZi1iMDY1LTk0MmI4ZGJkYThiYlwvZGZvZTVsMC1hNTgzNmJjNS1jYmQ4LTRkM2MtOTI2MS1mMDc1MjIwM2E3YjEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.UX8wcUJ2xlY950KYK4a9Eyen3GObf7HVWkwuSc2xb_Q" class="card-img-top" alt="Action Movie 3">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Mission Impossible: Dead Reckoning</h5>
+                                <p class="card-text">A team of elite operatives battling for justice in a world of corruption.</p>
+                                <a href="https://youtu.be/dHeUXfDcyqQ?t=700" class="btn btn-primary" target="_blank">Watch Video</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Drama Movies Section -->
+            <div id="drama" class="category-content">
+                <h3>Drama Movies</h3>
+                <div class="row g-4">
+                    <!-- Drama Movie 1 -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://aphrodite.gmanetwork.com/entertainment/photos/photo/international_posters_of__hello__love__again__philippines_1729854568.jpg" height="450" class="card-img-top" alt="Drama Movie 1">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Hello, Love, Goodbye</h5>
+                                <p class="card-text">A heartfelt story of love, loss, and personal growth.</p>
+                                <a href="https://youtu.be/dKBIpd4Crww?t=2853" class="btn btn-primary" target="_blank">Watch Video</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Drama Movie 2 -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqNlCoI0z34-PtlVXPMZYvNbHh465UHPxC0Q&s" class="card-img-top" alt="Drama Movie 2">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Barcelona</h5>
+                                <p class="card-text">A gripping tale about overcoming adversity and finding hope.</p>
+                                <a href="https://youtu.be/Df1dqWaC7c0?t=1509" class="btn btn-primary" target="_blank">Watch Video</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Drama Movie 3 -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://m.media-amazon.com/images/M/MV5BYTA2ODg2YTQtYjRmNS00YTdkLWI3NmMtMTJhMGY5MjIyZTBmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" class="card-img-top" alt="Drama Movie 3">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Forevermore</h5>
+                                <p class="card-text">A powerful story about the bonds between family and friends.</p>
+                                <a href="https://youtu.be/qacy7yPWC5E?t=1011" class="btn btn-primary" target="_blank">Watch Video</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Comedy Movies Section -->
+            <div id="comedy" class="category-content">
+                <h3>Comedy Movies</h3>
+                <div class="row g-4">
+                    <!-- Comedy Movie 1 -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://m.media-amazon.com/images/M/MV5BZTllNTZiZGQtOWQ1Yi00Y2RkLWEyOGEtNDUxMWU0ZmNlYjgxXkEyXkFqcGc@._V1_.jpg" class="card-img-top" alt="Comedy Movie 1">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Ang Boyfriend Kung Gamol</h5>
+                                <p class="card-text">A hilarious tale of mistaken identity and outrageous situations.</p>
+                                <a href="https://youtu.be/HXE0zuH6UCw?t=1883" class="btn btn-primary" target="_blank">Watch Video</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Comedy Movie 2 -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://image.tmdb.org/t/p/original/nV1WHEeDGayDmChqQQbHzSDlPrd.jpg" class="card-img-top" alt="Comedy Movie 2">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Grown Ups 2</h5>
+                                <p class="card-text">A laugh-out-loud story about a quirky group of friends on a road trip.</p>
+                                <a href="https://youtu.be/E8actsqr7mI?t=1954" class="btn btn-primary" target="_blank">Watch Video</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Comedy Movie 3 -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://m.media-amazon.com/images/M/MV5BOTI1NmE1Y2MtNGI2ZS00MjRjLTgyODItMjEzMTU1NjI0ZGRjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" class="card-img-top" alt="Comedy Movie 3">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Mahirap Maging Pogi</h5>
+                                <p class="card-text">An unlikely hero wins the hearts of everyone with his wit and humor.</p>
+                                <a href="https://youtu.be/5G7K0A2wFIE?t=2" class="btn btn-primary" target="_blank">Watch Video</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     </section>
+   
+
+    <!-- About Us Section -->
+  <!-- About Us Section -->
+<section id="about" class="container py-5 bg-dark text-light">
+    <div class="container">
+        <h2 class="text-center mb-4">About MovieMania</h2>
+        <p class="lead text-center">MovieMania is your ultimate destination for everything related to movies. From the latest blockbuster hits to timeless classics, we bring you a world of cinematic wonders at your fingertips. Whether you're looking for the newest trailers, insightful reviews, or an extensive collection of movies across genres, MovieMania is here to satisfy all your entertainment needs.</p>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Our Mission</h4>
+                <p>At MovieMania, our mission is to provide movie lovers with a one-stop platform for discovering, watching, and discussing movies. We aim to deliver up-to-date information, trailers, and reviews to help you make the best choices for your next movie night. We want to create a community where movie enthusiasts can connect and share their love for the art of cinema.</p>
+            </div>
+            <div class="col-md-6">
+                <h4>What We Offer</h4>
+                <ul>
+                    <li><strong>Latest Movie Trailers:</strong> Stay updated with the newest trailers of upcoming movies.</li>
+                    <li><strong>Comprehensive Reviews:</strong> Read detailed reviews to help you decide which movie to watch next.</li>
+                    <li><strong>Genre Collections:</strong> Explore movies based on categories like Action, Drama, Comedy, and more.</li>
+                    <li><strong>Community Interaction:</strong> Engage with other movie enthusiasts through comments and recommendations.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section id="contact" class="py-5">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            
+            <!--Go to Bootstrap and Copy the Code "https://getbootstrap.com/docs/5.3/forms/overview/#overview"-->
+            <!-- Contact Form -->
+            <form id="contactForm" class="border rounded-3">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" required>
+                    <small id="emailHelp" class="form-text">We'll never share your email with anyone else!!</small>
+                </div>
+                <div class="form-group ">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                </div>
+                <div class="form-check ">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+    
+            <!-- Success Message -->
+            <div id="successMessage" class="alert alert-success mt-3" style="display:none;">Form submitted successfully!</div>
+    
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <h4>Follow Us </h4>
+                <div class="social-links text-center">
+                    <a href="#" class="facebook"><i class="bi-brands bi-facebook"></i></a>
+                    <a href="#" class="twitter"><i class="bi-brands bi-twitter"></i></a>
+                    <a href="#" class="youtube"><i class="bi-brands bi-youtube"></i></a>
+                    <a href="#" class="linkedin"><i class="bi-brands bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="sources" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Sources Documentation</h2>
+        <p class="lead text-center mb-4">This page lists the external sources we rely on to provide accurate movie data, images, and media.</p>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <h4>The Movie Database (YouTube)</h4>
+                <p><strong>Website:</strong> <a href="" target="_blank">https://www.youtube.com</a></p>
+                <p><strong>Description:</strong> YouTube is a popular video-sharing platform that hosts a wide variety of content, including official movie trailers, promotional videos, and fan-generated content. We embed YouTube videos such as movie trailers and teasers to enhance the user experience on our site, providing access to the latest video content directly from the source.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </body>
+        </html>
+                
+    <footer class="bg-primary text-center text-light py-3">
+        <p>&copy; 2024 MovieMania. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="js/categories.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+    
+   
+</body>
+</html>

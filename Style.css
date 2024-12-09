@@ -1,0 +1,217 @@
+/* General Styles */
+
+@media (max-width: 1199px){
+  .header{
+    left: -100%;
+  }
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background: linear-gradient(to right, #141E30, #243B55); /* Dark gradient background */
+}
+
+h1, h2, h5 {
+  font-weight: 700;
+  margin-top: 25px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(45deg, #ff4e50, #f9d423); /* Vibrant gradient */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 100px;
+}
+
+.profile-img{
+  display: block;
+  width: 100px;
+  margin: 10px auto;
+  border: 3px solid #16a085; /* Slightly darker green border */
+  border-radius: 50%;
+}
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #243B55; /* Match the gradient background */
+  text-decoration: underline;
+}
+
+/* Header Section */
+header {
+  text-align: center;
+  background: url('path-to-your-banner-image.jpg') no-repeat center center/cover;
+  padding: 10px 20px;
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+  font-size: 3.5rem;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+header p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+/* Search Section */
+#movieSearch {
+  border: none;
+  border-radius: 50px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  outline: none;
+}
+
+#searchBtn {
+  background: #ff4e50;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 30px;
+  font-size: 1rem;
+  color: white
+}
+
+#searchBtn:hover {
+  background: #f9d423;
+  color: #243B55;
+}
+
+/* Featured Movies */
+.card {
+  background: linear-gradient(to bottom, #243B55, #141E30); /* Matching gradient */
+  border: none;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 15px;
+}
+
+.card img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+.card img:hover {
+  transform: scale(1.1);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #f9d423;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  color: white;
+}
+
+/* Categories */
+.category-card {
+  background: linear-gradient(to bottom, #243B55, #141E30);
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.category-card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.category-card img:hover {
+  transform: scale(1.1);
+}
+
+/* Contact */
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+#emailHelp {
+  color: #fff;
+  opacity: 50%;
+}
+.social-icons {
+  margin: 0 10px;
+  color: blue;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+.social-icons:hover {
+  color:lightblue;
+}
+
+.social-icons h4{
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background: #141E30;
+  text-align: center;
+  padding: 20px 10px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+footer p a {
+  color: #ff4e50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer p a:hover {
+  color: #f9d423;
+}
+.category-content {
+  display: none;
+  padding-top: 50px;
+}
+.category-content.active {
+  display: block;
+}
