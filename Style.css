@@ -1,5 +1,7 @@
 /* General Styles */
-
+html {
+  scroll-behavior: smooth;
+}
 @media (max-width: 1199px){
   .header{
     left: -100%;
